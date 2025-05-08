@@ -1,3 +1,8 @@
+{/* هذا الكود المسؤل عن صفحة اختيار المستوى ARABIC COURSES */}
+
+
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -27,7 +32,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, languageId, index }) =>
         <p className="text-gray-600 dark:text-gray-300 mb-6">{course.description}</p>
         
         <div className="flex justify-between items-center">
-          <span className="text-xl font-bold text-red-600 dark:text-red-400">${course.price}</span>
+          <span className="text-xl font-bold text-red-600 dark:text-red-400">{course.price}</span>
           
           <Link 
             to={`/language/${languageId}/course/${course.id}`}

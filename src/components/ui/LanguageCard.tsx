@@ -11,12 +11,12 @@ interface LanguageCardProps {
 
 const LanguageCard: React.FC<LanguageCardProps> = ({ language, index }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="relative overflow-hidden rounded-lg shadow-lg group"
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        className="relative overflow-hidden rounded-lg shadow-lg group"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
       

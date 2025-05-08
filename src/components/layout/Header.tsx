@@ -43,7 +43,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
           <motion.img 
-            src="https://i.imgur.com/YP2LwJP.png" 
+            src="/images/logo.png" 
             alt="OKTANT LANG Logo" 
             className="h-12 w-auto cursor-pointer" 
             initial={{ rotate: 0 }}
@@ -60,7 +60,10 @@ const Header: React.FC = () => {
         </Link>
 
         <div className="flex items-center space-x-4">
-          <Link to="/cart" className="relative">
+
+                         {/* هنا ظهور سلة الدفع */}
+          {/*
+            <Link to="/cart" className="relative">
             <ShoppingCart className="h-6 w-6 text-gray-700 dark:text-gray-300" />
             {itemCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -68,7 +71,9 @@ const Header: React.FC = () => {
               </span>
             )}
           </Link>
-          
+          */}
+
+
           <button 
             onClick={toggleTheme}
             className="p-1 rounded-full focus:outline-none"
@@ -82,6 +87,7 @@ const Header: React.FC = () => {
           </button>
 
           <div className="relative">
+            
             <button
               className="p-1 focus:outline-none"
               onClick={() => setIsOpen(!isOpen)}

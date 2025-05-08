@@ -154,29 +154,18 @@ const CourseDetails: React.FC = () => {
                   <div className="flex items-center justify-between mb-6">
                     <div>
                       <span className="text-gray-500 dark:text-gray-400">Price</span>
-                      <div className="text-3xl font-bold text-gray-900 dark:text-white">${course.price}</div>
+                      <div className="text-3xl font-bold text-gray-900 dark:text-white"> 100 ${course.price}</div>
                     </div>
-                    <button
-                      onClick={handleAddToCart}
-                      disabled={added}
-                      className={`flex items-center space-x-2 px-6 py-3 rounded-lg ${
-                        added
-                          ? 'bg-green-600 text-white cursor-default'
-                          : 'bg-red-600 hover:bg-red-700 text-white'
-                      } transition-colors duration-300`}
-                    >
-                      {added ? (
-                        <>
-                          <Check className="h-5 w-5" />
-                          <span>Added to Cart</span>
-                        </>
-                      ) : (
-                        <>
-                          <ShoppingCart className="h-5 w-5" />
-                          <span>Add to Cart</span>
-                        </>
-                      )}
-                    </button>
+                    <a
+                        href="https://www.instagram.com/i5boo" // هون مكان رابط الدفع واكمال التسجيل
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 px-6 py-3 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors duration-300"
+                        >
+                        <ShoppingCart className="h-5 w-5" />
+                        <span>تابعنا على إنستغرام</span>
+                    </a>
+
                   </div>
                   
                   <div className="text-center">

@@ -16,6 +16,8 @@ const Home: React.FC = () => {
   return (
     <Layout>
       <HeroSection />
+
+      
       
       <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">

@@ -28,8 +28,8 @@ const LanguageCircle: React.FC<LanguageCircleProps> = ({ language, index, total 
       }}
       style={{ 
         position: 'absolute',
-        left: `calc(50% + ${x}px)`,
-        top: `calc(50% + ${y}px)`,
+        left: `calc(47.5% + ${x}px)`,
+        top: `calc(39% + ${y}px)`,
         transform: 'translate(-50%, -50%)',
       }}
     >

@@ -45,7 +45,7 @@ const LanguageCircles: React.FC = () => {
           const endAngle = ((index + 1) / LANGUAGES.length) * Math.PI * 2;
           const radius = 150;
           
-          const startX = Math.cos(startAngle) * radius + 200;
+          const startX = Math.cos(startAngle) * radius + 2000;
           const startY = Math.sin(startAngle) * radius + 200;
           const endX = Math.cos(endAngle) * radius + 200;
           const endY = Math.sin(endAngle) * radius + 200;

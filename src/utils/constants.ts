@@ -1,21 +1,21 @@
 import { Language, CourseLevel, Testimonial, Statistic, SocialMedia } from '../types';
 
 export const LANGUAGES: Language[] = [
-  { id: 'en', name: 'English', code: 'en', emoji: '🏛️', flagCode: 'GB', description: 'Master the global language of business and international communication.' },
-  { id: 'es', name: 'Spanish', code: 'es', emoji: '🏰', flagCode: 'ES', description: 'Learn one of the most widely spoken languages in the world.' },
+  { id: 'en', name: 'English', code: 'en', emoji: '🗽', flagCode: 'GB', description: 'Master the global language of business and international communication.' },
+  { id: 'es', name: 'Spanish', code: 'es', emoji: '💃', flagCode: 'ES', description: 'Learn one of the most widely spoken languages in the world.' },
   { id: 'fr', name: 'French', code: 'fr', emoji: '🗼', flagCode: 'FR', description: 'Discover the language of culture, art, and diplomacy.' },
   { id: 'de', name: 'German', code: 'de', emoji: '🏰', flagCode: 'DE', description: 'Learn the language of innovation and engineering excellence.' },
   { id: 'it', name: 'Italian', code: 'it', emoji: '🏛️', flagCode: 'IT', description: 'Immerse yourself in the language of art, music, and cuisine.' },
-  { id: 'ar', name: 'Arabic', code: 'ar', emoji: '🕌', flagCode: 'SA', description: 'Master the language of rich cultural heritage and business opportunities.' },
+  { id: 'ar', name: 'Arabic', code: 'ar', emoji: '🕋', flagCode: 'SA', description: 'Master the language of rich cultural heritage and business opportunities.' },
   { id: 'tr', name: 'Turkish', code: 'tr', emoji: '🕌', flagCode: 'TR', description: 'Bridge cultures with the language that connects East and West.' }
 ];
 
 export const COURSE_LEVELS: CourseLevel[] = [
-  { id: 1, title: 'Level One', description: 'Begin your language journey with basic vocabulary and simple phrases.', emoji: '🐣', price: 100 },
-  { id: 2, title: 'Level Two', description: 'Build on your foundation with more complex sentences and grammar.', emoji: '🐥', price: 100 },
-  { id: 3, title: 'Level Three', description: 'Develop conversational skills and expand your vocabulary.', emoji: '🐓', price: 100 },
-  { id: 4, title: 'Level Four', description: 'Master advanced grammar and specialized vocabulary.', emoji: '🦅', price: 100 },
-  { id: 5, title: 'Level Five', description: 'Achieve fluency and cultural understanding.', emoji: '🚀', price: 100 }
+  { id: 1, title: 'Level One', description: 'Begin your language journey with basic vocabulary and simple phrases.', emoji: '🐣',  },
+  { id: 2, title: 'Level Two', description: 'Build on your foundation with more complex sentences and grammar.', emoji: '🐥', },
+  { id: 3, title: 'Level Three', description: 'Develop conversational skills and expand your vocabulary.', emoji: '🐓',   },
+  { id: 4, title: 'Level Four', description: 'Master advanced grammar and specialized vocabulary.', emoji: '🦅',   },
+  { id: 5, title: 'Level Five', description: 'Achieve fluency and cultural understanding.', emoji: '🚀',   }
 ];
 
 export const CONTACT_INFO = {
@@ -56,14 +56,17 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
     name: 'John Doe',
-    message: 'This program greatly improved my language skills!',
-    image: '/images/john.jpg'
+    role: 'Student',
+    content: 'This program greatly improved my language skills 🚀',
+    avatar: "/images/john.jpg"
   },
   {
     id: 2,
     name: 'Jane Smith',
-    message: 'The courses were well structured and fun.',
-    image: '/images/jane.jpg'
+    role: 'Student',
+    content: 'The courses were well structured and fun 🗓️',
+    avatar: "/images/jane.jpg"
+
   }
 ];
 
@@ -85,7 +88,7 @@ export const STATISTICS: Statistic[] = [
     id: 3,
     label: 'Certified Teachers',
     value: 20,
-    icon: 'UserCheck'
+    icon: 'Users'
   },
   {
     id: 4,

@@ -12,16 +12,37 @@ const HeroSection: React.FC = () => {
       opacity: 1,
       transition: { duration: 0.8, ease: "easeOut" }
     });
+
+    const img = document.querySelector('.hero-image') as HTMLElement;
+    if (img) {
+      setTimeout(() => {
+        img.classList.remove('opacity-0');
+        img.classList.add('opacity-100');
+      }, 800);
+    }
   }, [controls]);
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background with subtle pattern */}
+      {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 z-0">
         <div className="absolute inset-0 opacity-10 dark:opacity-20" style={{ 
           backgroundImage: "url('https://www.transparenttextures.com/patterns/cubes.png')" 
         }}></div>
       </div>
+
+      {/* صورةالصفحة الرئيسية مع التلاشي */}
+      <img
+  src="/images/homeimg.png"
+  alt="Education"
+  className="hero-image absolute top-0 right-52 w-[56vw] md:w-[50vw] lg:w-[45vw] max-w-[800px] h-auto rounded-xl transition-all duration-1000 opacity-0 z-10 shadow-none"
+  style={{ 
+    animation: 'fade-in-up 3s ease-out 1s forwards',
+    objectFit: 'contain'
+  }}
+/>
+
+
 
       <div className="container mx-auto px-4 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -49,7 +70,7 @@ const HeroSection: React.FC = () => {
               Personalized courses, expert teachers, and interactive lessons.
             </motion.p>
             
-            <motion.div 
+            <motion.div     
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -72,72 +93,18 @@ const HeroSection: React.FC = () => {
               </Link>
             </motion.div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="hidden lg:block"
           >
-            <div className="relative w-full h-96">
-              {/* 3D Education objects animation */}
-              <motion.div 
-                className="absolute top-10 left-20 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl"
-                animate={{ 
-                  y: [0, -15, 0],
-                  rotate: [0, 5, 0] 
-                }}
-                transition={{ 
-                  duration: 6, 
-                  repeat: Infinity,
-                  repeatType: "reverse" 
-                }}
-              >
-                <BookOpen size={48} className="text-red-600" />
-              </motion.div>
-              
-              <motion.div 
-                className="absolute top-40 right-20 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl"
-                animate={{ 
-                  y: [0, 15, 0],
-                  rotate: [0, -5, 0] 
-                }}
-                transition={{ 
-                  duration: 5, 
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  delay: 1 
-                }}
-              >
-                <PenTool size={48} className="text-blue-600" />
-              </motion.div>
-              
-              <motion.div 
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-white dark:bg-gray-800 p-6 rounded-full shadow-xl"
-                animate={{ 
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 360] 
-                }}
-                transition={{ 
-                  scale: {
-                    duration: 5, 
-                    repeat: Infinity,
-                    repeatType: "reverse"
-                  },
-                  rotate: {
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }
-                }}
-              >
-                <Globe size={64} className="text-green-600" />
-              </motion.div>
-            </div>
+            <div className="relative w-full h-96"></div>
           </motion.div>
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
